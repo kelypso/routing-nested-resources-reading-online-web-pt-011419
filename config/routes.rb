@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # resources :authors, only: [:show]
   resources :authors, only: [:show] do
     # nested resource for posts
-    resources :posts, only: [:show, :index]
+    resources :posts, only: [:show, :index] # only want show and index nested
   end
 
   resources :posts, only: [:index, :show, :new, :create, :edit, :update]
