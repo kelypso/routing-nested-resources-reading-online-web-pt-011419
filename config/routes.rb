@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :posts, only: [:show, :index] # only want show and index nested
   end
 
+  # outside of author context
   resources :posts, only: [:index, :show, :new, :create, :edit, :update]
 
   root 'posts#index'
